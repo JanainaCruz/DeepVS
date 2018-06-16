@@ -17,11 +17,8 @@ Note that in this version of the code we use ReLU and add dropout. These changes
 
 ## DUD preprocessed data
 
-In order to run the code, you will need our preprocessed vina ouput data, which we made  available through the following link:
+In order to run the code, you will need our preprocessed vina ouput [data](thttps://www.dropbox.com/s/4486qf7lpsxuwy2/dud_vinaout_deepvs.zip?dl=0).
 
-```
-https://www.dropbox.com/s/4486qf7lpsxuwy2/dud_vinaout_deepvs.zip?dl=0 
-```
 After downloading the data, unzip it and put the folder dud_vinaout_deepvs in the same directory as [train.py
 ](train.py)
   
