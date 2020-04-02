@@ -35,9 +35,7 @@ def load_data (datasetPath, kc, kp, proteinNames, rng, randomize = False):
                 data = line.split(",")
                 
                 if data[0][0] == "@":
-                    MolName.append(data[0])
-                    #MolClass.append(int(data[1]))
-                    MolData.append([int(data[1])])
+                    MolData.append([data[0], int(data[1])])
                 else:
                     i_atm = 0
                     for ligand in data[0:kc+kp]:
@@ -64,8 +62,9 @@ def load_data (datasetPath, kc, kp, proteinNames, rng, randomize = False):
         rng.shuffle(MolData)
         
     for ligand in MolData:
-        MolClass.append(ligand[0]) 
-        del ligand[0]
+        MolName.append(ligand[0])
+        MolClass.append(ligand[1]) 
+        del ligand[0], ligand[0]
     return MolName, MolClass, MolData
 
 
